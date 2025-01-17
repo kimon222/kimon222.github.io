@@ -1,5 +1,5 @@
 # Kimon's Personal Website
-Welcome to my personal website! Built with HTML and CSS. This website is live at: [kimonm.glitch.me](kimonm.glitch.me) 
+Welcome to my personal website! Built with HTML and CSS. This website is live at: [http://kimonm.glitch.me](http://kimonm.glitch.me) 
 
 [![Email](https://img.shields.io/badge/Email-Contact%20Me-orange)](mailto:kimonmono986@gmail.com)
 
