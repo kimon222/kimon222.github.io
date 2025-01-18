@@ -3,38 +3,31 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://glitch.com/favicon.ico" />
 
-    <title>About me</title>
+    <title>Kimon's Portfolio</title>
 
     <!-- import the webpage's stylesheet -->
     <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-<link rel="icon" href="https://cdn.glitch.com/822be019-145e-4066-9171-62b02dbfe7f8%2Fpenguins.jpeg?v=1628555615851">
+    <link rel="icon" href="https://cdn.glitch.com/822be019-145e-4066-9171-62b02dbfe7f8%2Fpenguins.jpeg?v=1628555615851">
     <!-- import the webpage's javascript file -->
-    <script src="/script.js" defer></script>
   </head>
   <body>
     <!-- this is the start of content -->
     <div class="wrapper">
-      
+      <!-- Add bubbles for animation -->
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+
       <div class="main">
-        <img class="main-img" src="https://cdn.glitch.global/822be019-145e-4066-9171-62b02dbfe7f8/professional.png?v=1710106821859" alt="picture of me (Kimon)">
-        
+        <img class="main-img" src="./images/professional.png" alt="picture of me (Kimon)">
         <div class="main-desc">
-          <p>
-            Kimon Monokandilos
-          </p>
-          <p>
-            Software Engineer   
-          </p>
-        </div>
-        
-        <div class="buttons">
-          <button><a target="_blank" href="https://cdn.glitch.global/822be019-145e-4066-9171-62b02dbfe7f8/km_id.png?v=1737113984882">
-            view my resume
-          </a></button>
+          <p style="font-size: 30px;">Kimon Monokandilos</p>
+          <p>🚀 Software Engineer from San Francisco, CA</p>
         </div>
         
         <div class="social-icons">
@@ -43,14 +36,13 @@
               <i class="fab fa-linkedin"></i>
             </div>
           </a>
+          
+          <div class="buttons">
+          <button>📧 kimonmono986@gmail.com</button>
+        </div>
           <a target="_blank" href="https://github.com/kimonmono986">
             <div class="social-icon">
               <i class="fab fa-github"></i>
-            </div>
-          </a>
-          <a target="_blank" href="mailto:kimonmono986@gmail.com">
-            <div class="social-icon">
-              <i class="fas fa-envelope"></i>
             </div>
           </a>
         </div>
@@ -58,39 +50,42 @@
       
       <div class="side">
         <div class="left">
-          <h2>
-            About me
-          </h2>
-          <br />
-          <p>
-          Feel free to send me a message over LinkedIn or email me at kimonmono986@gmail.com!
-          <br /><br />
-          ➜ Technical skills: JavaScript, Python, Java, Ruby, Express, Flask, Bootstrap, MySQL, PostgreSQL, Nodejs, Git, Heroku, AWS, SASS, Jasmine<br />
-          ➜ Learning more about: Ajax, Swift, Materialize, Go<br />
-          ➜ Interested in: Web Development, Front-end, Back-end, and Artificial Intelligence.          
+          <h2>Technical Skills</h2>
+          <p style="padding-bottom: 7px;">
+            frontend: React.js, JavaScript, HTML, CSS, SCSS<br/>
+            backend: Java, Python, Ruby, REST API's, Flask, MySQL, C++<br/>
+            technologies: Docker, Git, Postman
           </p>
-          <br>
-        </div>
-        
-        <div class="right">
           <h2>
-            GitHub Projects
+            Experience
           </h2>
-          <br />
-          
-            SignMe: Provides a digital sign-in application designed for iPads/tablets across 
-              5+ of Dev/Mission's sites for program participants. Technologies: React.js, Express, HTML, CSS, PostgreSQL, Nodejs
-              <a target="_blank" style="color: darkblue" href="https://kikisrecipes.glitch.me">dmsignme.herokuapp.com</a>
-          <br /><br />
-            Kindness: An app spreading awareness about mental health. Developed during Microsoft 
-              San Francisco Summer Project. Technologies: Ruby on Rails, Ruby, React.js, HTML, CSS
-              <a target="_blank" style="color: darkblue" href="https://www.tinkercad.com/things/1sblgsTYTrU-make-a-thon/editel">
-                github.com/kimonmono986/kindnessapp</a>
-          
+          <p style="padding-bottom: 7px;">
+            2024-present | Software Engineer<br/>
+            2023-2024 | Coding Teaching Assistant<br/>
+            2022 | Software Engineering Intern<br/>
+          </p>
+          <h2>
+            Education
+          </h2>
+          <p>
+            2019-2023 | San Francisco State University 
+          </p>
+        </div>
+        <div class="right">
+          <h2>Projects</h2>
+          <!-- Projects Container -->
+          <div class="projects">
+            <a target="_blank" href="https://dmsignme.herokuapp.com"><div class="project-card">
+              <img src="./images/signme.png" alt="signme project preview image" class="project-img" />
+              <div class="project-title">SignMe</div>
+            </div></a>
+            <a target="_blank" href="https://github.com/kimonmono986/kindnessapp"><div class="project-card">
+              <img src="./images/kindness.png" alt="kindness project preview image" class="project-img" />
+              <div class="project-title">Kindness</div>
+            </div></a>
+          </div>
         </div>
       </div>
-      
-      
     </div>
   </body>
 </html>
