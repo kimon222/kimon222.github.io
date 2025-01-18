@@ -1,5 +1,5 @@
 # Kimon's Personal Website
-Welcome to my personal website! Built with HTML and CSS. This website is live at: [http://kimonm.glitch.me](http://kimonm.glitch.me) 
+Welcome to my personal website!
 
 ## Technologies Used
 - ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
