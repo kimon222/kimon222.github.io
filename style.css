@@ -11,13 +11,16 @@ body {
   overflow-x: hidden;
   color: white;
 }
+
 h2 {
   padding-bottom: 7px;
   font-size: 45px;
 }
+
 p {
   font-size: 20px;
 }
+
 .wrapper { 
   display: flex;
   flex-direction: column;
@@ -44,20 +47,18 @@ p {
 .main-img {
   height: 240px;
   width: 220px;
-/*   border-radius: 50%; */
   border-radius: 15px;
   margin-top: 40px;
   margin-bottom: 40px;
   cursor: pointer;
-  filter: grayscale(100%); /* Start with grayscale (black and white) */
-  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out, box-shadow 0.6s ease-in-out; /* Add smooth transitions */
+  filter: grayscale(100%);
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out, box-shadow 0.6s ease-in-out;
 }
 
 .main-img:hover {
-  filter: grayscale(0%); /* Remove grayscale (add color) */
-  transform: scale(1.1); /* Slightly enlarge the image */
+  filter: grayscale(0%);
+  transform: scale(1.1);
 }
-
 
 .main-desc {
   background-color: #ffe5e5;
@@ -69,10 +70,11 @@ p {
   min-width: 350px;
   color: black;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out, box-shadow 0.6s ease-in-out; /* Add smooth transitions */
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out, box-shadow 0.6s ease-in-out;
 }
+
 .main-desc:hover {
-  transform: scale(1.1); /* Slightly enlarge the image */
+  transform: scale(1.1);
 }
 
 .buttons {
@@ -190,6 +192,9 @@ a {
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .project-img {
@@ -201,13 +206,13 @@ a {
 
 .project-title {
   position: absolute;
-  bottom: 20px;
+  bottom: 0;
   left: 0;
   right: 0;
-  color: black;
-  background-color: lightgrey;
-  padding: 5px;
-  border-radius: 10px;
+  color: white;
+  /* background-color: lightgrey; */
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
   width: fit-content;
   margin: 0 auto;
   text-align: center;
@@ -216,13 +221,27 @@ a {
   transition: opacity 0.3s ease-in-out;
 }
 
-.project-card:hover .project-img {
-  transform: scale(1.05);
-  filter: grayscale(60%) brightness(70%);
+.project-title .project-caption {
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  padding: 5px;
+  /* background-color: lightgrey; */
+  border-radius: 10px;
+  margin-top: 5px;
 }
 
 .project-card:hover .project-title {
   opacity: 1;
+}
+
+.project-card:hover .project-title .project-caption {
+  opacity: 1;
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.05);
+  filter: grayscale(60%) brightness(40%);
 }
 
 .project-card:hover {
@@ -232,7 +251,7 @@ a {
 /* Floating bubbles */
 .bubble {
   position: absolute;
-  bottom: -150px; /* Start below the bottom of the viewport */
+  bottom: -150px;
   background: rgba(255, 255, 255, 0.5);
   border-radius: 50%;
   animation: floatAimlessly 20s linear infinite;
@@ -243,36 +262,32 @@ a {
   width: 140px;
   height: 140px;
   left: 10%;
-  background: rgba(255, 165, 0, 0.8); /* Orange */
+  background: rgba(255, 165, 0, 0.8);
   animation-duration: 52s;
-  animation-delay: 0s; /* No delay, instant start */
 }
 
 .bubble:nth-child(2) {
   width: 130px;
   height: 130px;
   left: 30%;
-  background: rgba(255, 69, 0, 0.8); /* Red */
+  background: rgba(255, 69, 0, 0.8);
   animation-duration: 25s;
-  animation-delay: 0s; /* No delay, instant start */
 }
 
 .bubble:nth-child(3) {
   width: 100px;
   height: 100px;
   left: 50%;
-  background: rgba(173, 216, 230, 0.8); /* Light Blue */
+  background: rgba(173, 216, 230, 0.8);
   animation-duration: 27s;
-  animation-delay: 0s; /* No delay, instant start */
 }
 
 .bubble:nth-child(4) {
   width: 140px;
   height: 140px;
   left: 70%;
-  background: rgba(255, 255, 102, 0.8); /* Yellow */
+  background: rgba(255, 255, 102, 0.8);
   animation-duration: 30s;
-  animation-delay: 0s; /* No delay, instant start */
 }
 
 /* Aimless floating animation */
