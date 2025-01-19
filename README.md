@@ -1,5 +1,5 @@
 # kimonmono986.github.io
-Welcome to my portfolio! This website showcases my HTML, CSS, and JavaScript skills and projects. 
+Welcome to my portfolio! This website showcases my HTML, CSS, and JavaScript skills. 
 
 ## Technologies
 <div style="display: flex">
