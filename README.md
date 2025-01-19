@@ -8,4 +8,6 @@ Welcome to my portfolio! This website showcases my HTML, CSS, and JavaScript ski
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="50" height="50"/>
 </div>
 
+<br/>
+
 <img src="./images/demo.png" alt="shows the home page of my personal website" height="500px" width="1000px" />
