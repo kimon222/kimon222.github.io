@@ -30,7 +30,7 @@ p {
 
 .main {
   background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
-    url("./images/codestufff.jpeg");
+    url("./images/lights.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 500px;
@@ -258,11 +258,12 @@ a {
   pointer-events: none;
 }
 
+/* Updated Floating bubbles with colors from the image */
 .bubble:nth-child(1) {
   width: 140px;
   height: 140px;
   left: 10%;
-  background: rgba(255, 165, 0, 0.8);
+  background: rgba(0, 102, 255, 0.8); /* Vibrant Blue */
   animation-duration: 52s;
 }
 
@@ -270,7 +271,7 @@ a {
   width: 130px;
   height: 130px;
   left: 30%;
-  background: rgba(255, 69, 0, 0.8);
+  background: rgba(255, 0, 102, 0.8); /* Bright Magenta */
   animation-duration: 25s;
 }
 
@@ -278,7 +279,7 @@ a {
   width: 100px;
   height: 100px;
   left: 50%;
-  background: rgba(173, 216, 230, 0.8);
+  background: rgba(0, 255, 153, 0.8); /* Neon Green */
   animation-duration: 27s;
 }
 
@@ -286,9 +287,18 @@ a {
   width: 140px;
   height: 140px;
   left: 70%;
-  background: rgba(255, 255, 102, 0.8);
+  background: rgba(255, 102, 0, 0.8); /* Bright Orange */
   animation-duration: 30s;
 }
+
+.bubble:nth-child(5) {
+  width: 120px;
+  height: 120px;
+  left: 90%;
+  background: rgba(204, 0, 255, 0.8); /* Deep Purple */
+  animation-duration: 35s;
+}
+
 
 /* Aimless floating animation */
 @keyframes floatAimlessly {
