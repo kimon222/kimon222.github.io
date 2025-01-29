@@ -30,7 +30,7 @@ p {
 
 .main {
   background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
-    url("./images/lights.jpeg");
+    url("./images/hills.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 500px;
@@ -56,7 +56,7 @@ p {
 }
 
 .main-img:hover {
-  filter: grayscale(0%);
+  filter: grayscale(70%);
   transform: scale(1.1);
 }
 
