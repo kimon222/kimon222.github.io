@@ -1,97 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Kimon's Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kimon Monokandilos - Portfolio</title>
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
-    <!-- import the webpage's stylesheet -->
-    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="/style.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-    <link rel="icon" href="https://cdn.glitch.com/822be019-145e-4066-9171-62b02dbfe7f8%2Fpenguins.jpeg?v=1628555615851">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   </head>
   <body>
-    <div class="wrapper">
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
-      <div class="bubble"></div>
+    <nav class="navbar">
+      <div class="nav-content">
+        <a href="#" class="logo">KM</a>
+        <button class="mobile-menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
 
-      <div class="main">
-        <img class="main-img fade-in" src="./images/pooll.png" alt="picture of me (Kimon)">
-        <div class="main-desc fade-in">
-          <p style="font-size: 30px;">Kimon Monokandilos</p>
-          <p>📍 San Francisco, Bay Area</p>
-        </div>
-        
-        <div class="social-icons fade-in">
-          <a target="_blank" href="https://www.linkedin.com/in/kimon-monokandilos/">
-            <div class="social-icon">
-              <i class="fab fa-linkedin"></i>
-            </div>
-          </a>
-          
-          <div class="buttons">
-            <button>kimonmono986@gmail.com</button>
-          </div>
-          
-          <a target="_blank" href="https://github.com/kimonmono986">
-            <div class="social-icon">
-              <i class="fab fa-github"></i>
-            </div>
-          </a>
+    <header>
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="header-content">
+        <h1>Kimon<br/> Monokandilos</h1>
+        <p>Frontend Engineer | AI Focus</p>
+        <div class="social-icons">
+          <a href="https://github.com/kimonmono986" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://linkedin.com/in/kimon-monokandilos/" target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
         </div>
       </div>
-      
-      <div class="side">
-        <div class="left">
-          <h2>Technical Skills</h2>
-          <p style="padding-bottom: 7px;">
-            frontend: React.js, JavaScript, HTML, CSS, SCSS<br/>
-            backend: Java, Python, Ruby, REST API's, Flask, MySQL, C++<br/>
-            technologies: LangChain, Docker, Git, Postman
-          </p>
-          <h2>Experience</h2>
-          <p style="padding-bottom: 7px;">
-            2024-2025 | Freelance Web Developer<br/>
-            2023-2024 | Instructor Assistant for Web Development<br/>
-            2022 | Full-Stack Fellow -> Computing Researcher
-          </p>
-          <h2>Education</h2>
-          <p>2019-2023 | San Francisco State University</p>
-          <p>leetcode.com/u/kimon986/</p>
+    </header>
+
+    <section id="about">
+      <h2 class="section-title">About Me</h2>
+      <p>
+        Hi, my name is Kimon!
+        I'm a frontend developer with a focus on AI. 
+        I recently earned my computer science degree from San Francisco State University. 
+        I have experience working across organizations such as Dev/Mission, Uber, and Mission Bit. 
+        During my frontend fellowship with Uber, I created a digital sign-in web application 
+        (SignMe) with a team, using React.js, HTML5, and CSS3. SignMe is currently being implemented 
+        across 5+ locations. <br/><br/>Furthermore, I was recently inspired by Udemy's course on developing LLM 
+        powered applications using LangChain, and created my own project called "FindMySong" which finds 
+        song titles and artist names from user-entered song lyrics. FindMySong uses HTML5 and CSS3 
+        for the user interface, and LangChain and Python to find song data using modern LLMs.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title">My Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="./images/findmysongpic.png" alt="Project 1" />
+          <div class="project-content">
+            <h3 class="project-title">FindMySong</h3>
+            <p class="project-description">
+              A song finder app built with CSS3, LangChain, and Python
+            </p>
+          </div>
         </div>
-        <div class="right">
-          <h2>Projects</h2>
-          <div class="projects">
-            <a target="_blank" href="https://dmsignme.herokuapp.com">
-              <div class="project-card">
-                <img src="./images/signme.png" alt="signme project preview image" class="project-img" />
-                <div class="project-title">
-                  SignMe
-                  <div class="project-caption">
-                    React.js | Node.js | PostgreSQL
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a target="_blank" href="https://github.com/kimonmono986/findmysong">
-              <div class="project-card">
-                <img src="./images/findmysonggpic.png" alt="find my song project preview image" class="project-img" />
-                <div class="project-title">
-                  FindMySong
-                  <div class="project-caption">
-                    LangChain | Python | Flask | HTML | CSS 
-                  </div>
-                </div>
-              </div>
-            </a>
+        <div class="project-card">
+          <img src="./images/signme.png" alt="Project 2" />
+          <div class="project-content">
+            <h3 class="project-title">SignMe</h3>
+            <p class="project-description">
+              A digital sign-in solution built with React.js, CSS3, and MySQL
+            </p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="./images/desktopver.png" alt="Project 3" />
+          <div class="project-content">
+            <h3 class="project-title">KindnessApp</h3>
+            <p class="project-description">
+              A mental health awareness app built with React.js, CSS3, and Ruby
+            </p>
           </div>
         </div>
       </div>
-    </div>
-    <script src="js/script.js"></script>   
+    </section>
+
+    <section id="skills">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-container">
+        <span class="skill-badge">React.js</span>
+        <span class="skill-badge">CSS3</span>
+        <span class="skill-badge">LangChain</span>
+        <span class="skill-badge">Python</span>
+        <span class="skill-badge">Node.js</span>
+        <span class="skill-badge">Ruby</span>
+        <span class="skill-badge">GitHub</span>
+        <span class="skill-badge">Figma</span>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact Me</h2>
+      <form class="contact-form" method="POST" action="mailto:kimonmono986@gmail.com" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Kimon Monokandilos" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="kimonmono986@gmail.com" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" placeholder="Information about your project" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Kimon Monokandilos</p>
+      <div class="back-to-top" id="backToTop">&#8679;</div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
+
+   
