@@ -70,16 +70,30 @@ const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
           this.reset();
         });
 
-      const backToTop = document.getElementById("backToTop");
+        const backToTop = document.getElementById("backToTop");
 
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 300) {
-          backToTop.classList.add("show");
-        } else {
-          backToTop.classList.remove("show");
-        }
-      });
-
-      backToTop.addEventListener("click", () => {
-        gsap.to(window, { duration: 1, scrollTo: { y: 0, autoKill: true } });
-      });
+        // Updated visibility logic
+        const updateBackToTop = () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add("show");
+            } else {
+                backToTop.classList.remove("show");
+            }
+        };
+        
+        // Use both scroll and touch events
+        ["scroll", "touchmove"].forEach(evt => 
+            window.addEventListener(evt, updateBackToTop, { passive: true })
+        );
+        
+        // Handle both click and touch
+        ["click", "touchend"].forEach(evt => 
+            backToTop.addEventListener(evt, (e) => {
+                e.preventDefault();
+                gsap.to(window, {
+                    duration: 1,
+                    scrollTo: { y: 0, autoKill: true },
+                    ease: "power2.inOut"
+                });
+            })
+        );

@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+h1, h2, h3, .logo {
+  font-family: 'Poppins', sans-serif;
+}
+
 .social-icons {
     display: flex;
     justify-content: center;
@@ -17,13 +23,22 @@
   }
 
   .back-to-top {
+    transform: rotate(-90deg);
+    font-weight: bold;
+  }
+
+  .back-to-top.show {
+    transform: rotate(-90deg) translateX(0);
+  }
+
+  .back-to-top {
     position: fixed;
     bottom: 40px;
     right: 40px;
     background: var(--primary-pink);
     color: white;
-    width: 70px;
-    height: 70px;
+    width: 45px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,14 +46,25 @@
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 0 10px rgba(228, 43, 203, 0.5);
-    transition: opacity 0.3s, transform 0.3s;
+    transition: all 0.3s;
     opacity: 0;
     transform: translateY(20px);
-  }
-  .back-to-top.show {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    z-index: 1000;
+}
+
+.back-to-top > * {
+  transform: rotate(-90deg); /* Rotate just the arrow character */
+}
+
+.back-to-top.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: #f13bd8;
+  transform: translateY(-2px);
+}
 
   :root {
     --primary-pink: #e42bcb;
@@ -198,6 +224,12 @@
     animation: float 6s ease-in-out infinite;
   }
 
+  /* @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+} */
+
   @keyframes float {
     0%,
     100% {
@@ -222,7 +254,21 @@
     font-size: 2rem;
     color: #fff;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
   }
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-pink), var(--primary-blue));
+    border-radius: 3px;
+}
 
   .projects-grid {
     display: grid;
@@ -236,8 +282,8 @@
     padding: 10px;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(228, 43, 203, 0.2);
-    transition: transform 0.3s;
+    box-shadow: 0 4px 20px rgba(228, 43, 203, 0.3);
+    transition: box-shadow 0.3s ease;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -252,7 +298,8 @@
 
   .project-card:hover {
     transform: translateY(-5px);
-  }
+    box-shadow: 0 6px 30px rgba(228, 43, 203, 0.8);
+}
 
   .project-card img {
     width: 100%;
@@ -275,7 +322,14 @@
     font-size: 0.9rem;
     border: 1px solid rgba(228, 43, 203, 0.5);
     backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
   }
+
+  .skill-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(228, 43, 203, 0.3);
+    background: rgba(228, 43, 203, 0.2);
+}
 
   .contact-form {
     max-width: 600px;
@@ -306,6 +360,8 @@
     font-size: 1rem;
     color: #fff;
     transition: border-color 0.3s;
+    border-color: var(--primary-pink);
+    box-shadow: 0 0 8px rgba(228, 43, 203, 0.2);
   }
 
   .form-group input:focus,
@@ -315,18 +371,13 @@
   }
 
   button {
-    background: linear-gradient(
-      45deg,
-      var(--primary-pink),
-      var(--primary-blue)
-    );
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: transform 0.3s;
+    background: linear-gradient(45deg, var(--primary-pink), var(--primary-blue));
+    background-size: 200% 200%;
+    animation: gradient 5s ease infinite;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 15px;
+    transition: 0.3s ease;
   }
 
   button:hover {
