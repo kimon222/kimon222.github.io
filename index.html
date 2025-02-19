@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kimon Monokandilos | Financial Data Analyst</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        :root {
+            --primary: #0a192f;
+            --secondary: #112240;
+            --accent: #64ffda;
+            --text: #ccd6f6;
+            --text-muted: #8892b0;
+            --hover: #233554;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--primary);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(10, 25, 47, 0.85);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .social-links a {
+            color: var(--text);
+            font-size: 1.5rem;
+            margin-left: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+            display: inline-block;
+            color: var(--accent);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 50%;
+            height: 3px;
+            background-color: var(--accent);
+        }
+
+        /* About */
+        #about {
+            margin-top: 5rem;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-card {
+            background-color: var(--secondary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: all 0.3s;
+            border: 1px solid var(--hover);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            background-color: var(--hover);
+        }
+
+        .skill-card h3 {
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background-color: var(--secondary);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s;
+            border: 1px solid var(--hover);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            background-color: var(--hover);
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-title {
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        /* Education & Certifications */
+        .timeline-item {
+            background-color: var(--secondary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--hover);
+            transition: all 0.3s;
+        }
+
+        .timeline-item:hover {
+            background-color: var(--hover);
+        }
+
+        .timeline-item h3 {
+            color: var(--accent);
+        }
+
+        /* Back to Top */
+        .back-to-top {
+            text-decoration: none;
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: var(--accent);
+            color: var(--primary);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            opacity: 0.7;
+        }
+
+        .back-to-top:hover {
+            opacity: 1;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.75rem;
+            }
+        }
+
+        .about-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .profile-photo-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .profile-photo {
+            width: 260px;
+            height: 260px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 2px solid var(--accent);
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-photo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .profile-photo {
+                width: 220px;
+                height: 220px;
+                margin: 2rem auto;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Rest of the HTML remains the same -->
+    <header>
+        <div class="container header-content">
+            <div class="name">Kimon Monokandilos</div>
+            <div class="social-links">
+                <a href="https://github.com/kimon222" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/kimon-monokandilos" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/kimon_222" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-container">
+                <div>
+                    <p>CS graduate transitioning into financial data analytics and AI with experience in financial data analysis, data visualization, and AI/ML. Completed a virtual finance experience program with Goldman Sachs. Actively expanding skills through a ColumbiaX certification in Corporate Finance. Seeking remote opportunities as a Financial Data Analyst.</p>
+                </div>
+                <div class="profile-photo-container">
+                    <img src="./professional_profile_photo.jpeg" alt="Kimon Monokandilos" class="profile-photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Programming & Data Analysis</h3>
+                    <p>Python (Pandas, NumPy, MatPlotlib), SQL, Excel</p>
+                </div>
+                <div class="skill-card">
+                    <h3>AI & Machine Learning</h3>
+                    <p>Scikit-learn, TensorFlow, NLP, Time Series Forecasting</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Finance & Analytics</h3>
+                    <p>Financial modeling, market data analysis, risk assessment</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Tools</h3>
+                    <p>Tableau, Power BI, Jupyter Notebook, Google Colab</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Projects & Experience</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Goldman Sachs Operations Analyst Simulation - Forage</h3>
+                        <p>Conducted financial data analysis and risk management within an Operations Analyst role simulation at
+                            Goldman Sachs.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Stock Market Analysis & Forecasting</h3>
+                        <p>Used Python, Pandas, and Matplotlib to analyze stock price trends for S&P 500 companies.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Financial News Sentiment Analysis</h3>
+                        <p>Applied Natural Language Processing (NLP) to classify financial news as bullish or bearish for stock movement
+                            predictions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline-item">
+                <h3>Columbia University</h3>
+                <p>Certification in Introduction to Corporate Finance - ColumbiaX via edX</p>
+                <p><em>Feb 2025 - May 2025</em></p>
+            </div>
+            <div class="timeline-item">
+                <h3>Bachelor of Science in Computer Science</h3>
+                <p>San Francisco State University</p>
+                <p><em>Aug 2019 - Dec 2023</em></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="timeline-item">
+                <h3>LLM Engineering: Master AI</h3>
+                <p>Udemy, In Progress</p>
+            </div>
+            <div class="timeline-item">
+                <h3>LangChain - Building LLM Powered Solutions</h3>
+                <p>Udemy</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Google - Foundations: Data, Data, Everywhere</h3>
+                <p>Coursera</p>
+            </div>
+        </div>
+    </section>
+
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script>
+        // Show/hide back to top button based on scroll position
+        window.onscroll = function() {
+            const backToTop = document.querySelector('.back-to-top');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTop.style.display = "flex";
+            } else {
+                backToTop.style.display = "none";
+            }
+        };
+    </script>
+</body>
+</html>
